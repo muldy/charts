@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/linuxserver/ubooquity
   pullPolicy: IfNotPresent
-  tag: 2.1.2@sha256:70a6d77b74a2ae117ac9d06eec74acb86d1059beefa101a1009823bc0a77d46b
+  tag: 2.1.2@sha256:74ae85bcb86c29ea13eaa0b52324c45917bc66b4a7f5055495d0f576331340c1
 service:
   main:
     ports:

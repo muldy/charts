@@ -35,12 +35,3 @@ securityContext:
     readOnlyRootFilesystem: false
     runAsUser: 1000
     runAsGroup: 1000
-
-configmap:
-  dashboard:
-    enabled: true
-    labels:
-      grafana_dashboard: "1"
-    data:
-      speedtest.json: >-
-        {{ .Files.Get "dashboard.json" | indent 8 }}

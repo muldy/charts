@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: registry.gitlab.com/crafty-controller/crafty-4
-  tag: 4.3.0@sha256:50cb2b4d67c1fe4604a9ef32d157e9e1b8438a8837332da6134044e5041c4572
+  tag: 4.2.2@sha256:559c46ab863a7bb17ab2bca139285f9dd636125a88205f8edbcba3b3e7c24f9a
 securityContext:
   container:
     readOnlyRootFilesystem: false

@@ -240,7 +240,7 @@ questions:
                             description: "This port exposes the container port on the service"
                             schema:
                               type: int
-                              default: 5232
+                              default: 10255
                               required: true
 # Include{serviceExpertRoot}
 # Include{serviceExpert}

@@ -1,24 +1,24 @@
 annotations:
-  max_scale_version: 24.04.0
+  max_scale_version: 23.10.2
   min_scale_version: 23.10.0
   truecharts.org/SCALE-support: "true"
   truecharts.org/category: analytics
   truecharts.org/max_helm_version: "3.14"
-  truecharts.org/min_helm_version: "3.11"
+  truecharts.org/min_helm_version: "3.12"
   truecharts.org/train: stable
 apiVersion: v2
 appVersion: 2.0.0
 dependencies:
   - name: common
-    version: 20.0.6
+    version: 17.2.29
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
     tags: []
     import-values: []
   - name: clickhouse
-    version: 12.5.1
-    repository: oci://tccr.io/truecharts
+    version: 10.2.12
+    repository: https://deps.truecharts.org/
     condition: clickhouse.enabled
     alias: ""
     tags: []
@@ -44,4 +44,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/plausible
   - https://hub.docker.com/r/plausible/analytics
 type: application
-version: 10.9.0
+version: 8.2.8

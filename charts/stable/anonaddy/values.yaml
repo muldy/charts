@@ -1,6 +1,6 @@
 image:
   repository: anonaddy/anonaddy
-  tag: 1.0.9@sha256:7acf7b3f3165e5eb5c0813d2a717ebc8df24a9e3fcc124b6d4da5b070663c441
+  tag: 1.0.4@sha256:bb9d13028c5d33c071d7e04749a899236a34a96fe88232bbc8224d8b397f14ba
   pullPolicy: IfNotPresent
 strategy:
   type: Recreate

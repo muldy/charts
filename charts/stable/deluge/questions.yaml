@@ -73,7 +73,7 @@ questions:
                             description: "This port exposes the container port on the service"
                             schema:
                               type: int
-                              default: 6881
+                              default: 51413
                               required: true
 # Include{serviceExpertRoot}
 # Include{serviceExpert}

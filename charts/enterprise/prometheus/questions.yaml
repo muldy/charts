@@ -79,12 +79,6 @@ questions:
                 schema:
                   type: boolean
                   default: false
-              - variable: enableRemoteWriteReceiver
-                label: "Remote Write Receiver"
-                description: "Enable Prometheus to be used as a receiver for the Prometheus remote write protocol"
-                schema:
-                  type: boolean
-                  default: false
               - variable: remoteWrite
                 label: "Remote Write"
                 schema:

@@ -2254,33 +2254,6 @@
       "contributions": [
         "bug"
       ]
-    },
-    {
-      "login": "felixfon",
-      "name": "felixfon",
-      "avatar_url": "https://avatars.githubusercontent.com/u/66350602?v=4",
-      "profile": "https://github.com/felixfon",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "adtwomey",
-      "name": "adtwomey",
-      "avatar_url": "https://avatars.githubusercontent.com/u/14849762?v=4",
-      "profile": "https://github.com/adtwomey",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "alfi0812",
-      "name": "alfi0812",
-      "avatar_url": "https://avatars.githubusercontent.com/u/43101280?v=4",
-      "profile": "https://github.com/alfi0812",
-      "contributions": [
-        "code"
-      ]
     }
   ],
   "contributorsPerLine": 7,

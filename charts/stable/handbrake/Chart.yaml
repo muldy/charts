@@ -1,16 +1,16 @@
 annotations:
-  max_scale_version: 24.04.0
+  max_scale_version: 23.10.2
   min_scale_version: 23.10.0
   truecharts.org/SCALE-support: "true"
   truecharts.org/category: media
   truecharts.org/max_helm_version: "3.14"
-  truecharts.org/min_helm_version: "3.11"
+  truecharts.org/min_helm_version: "3.12"
   truecharts.org/train: stable
 apiVersion: v2
-appVersion: 24.03.1
+appVersion: 24.01.2
 dependencies:
   - name: common
-    version: 20.0.6
+    version: 17.2.29
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -24,7 +24,7 @@ keywords:
   - handbrake
   - encode
   - media
-kubeVersion: '>=1.24.0-0'
+kubeVersion: ">=1.24.0-0"
 maintainers:
   - name: TrueCharts
     email: info@truecharts.org
@@ -36,4 +36,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/handbrake
   - https://hub.docker.com/r/jlesage/handbrake
 type: application
-version: 21.6.0
+version: 20.0.5

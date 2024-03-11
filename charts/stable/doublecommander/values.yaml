@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/linuxserver/doublecommander
   pullPolicy: IfNotPresent
-  tag: latest@sha256:0166cf4b433c461909f309423bdd440eae5cd194022dcd0c98ca0919e5033f5e
+  tag: latest@sha256:f20eed8b66c50980c62025a17fe5e8bc0acb79fcebdef88c1bb793c7bb11577d
 securityContext:
   container:
     readOnlyRootFilesystem: false

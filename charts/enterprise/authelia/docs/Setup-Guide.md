@@ -98,7 +98,7 @@ Please see [Authelia Rules](./authelia-rules) for more advanced rules.
 - Check `trustForwardHeader`
 - Add the following `authResponseHeaders` (press `Add` 4 times)
   - `Remote-User`
-  - `Remote-Groups`
+  - `Remote-Group`
   - `Remote-Name`
   - `Remote-Email`
 

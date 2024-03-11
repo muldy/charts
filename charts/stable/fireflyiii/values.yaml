@@ -1,7 +1,7 @@
 image:
   repository: fireflyiii/core
   pullPolicy: IfNotPresent
-  tag: version-6.1.10@sha256:73bf6ea52fb6a8c73f6c8548e30fa36bd4588ce3aa829059498ebcf57d800279
+  tag: version-6.1.7@sha256:ae72d37ea47ed4f071f6f15053b2cdfd4cfe9c15b0855b1a5c252675d1f74816
 securityContext:
   container:
     readOnlyRootFilesystem: false

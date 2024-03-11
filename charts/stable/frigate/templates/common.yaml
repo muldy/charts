@@ -7,6 +7,9 @@
   {{- $_ := set .Values.configmap "frigate-config" $config -}}
 {{- end -}}
 
+{{- if not .Values.frigateConfig -}}
+  {{- $_ := set .Values.persistence.config "enabled" true -}}
+{{- end -}}
 
 {{- $vol := include "frigate.configVolume" . | fromYaml -}}
 {{- if $vol -}}

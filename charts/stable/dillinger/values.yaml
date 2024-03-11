@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/linuxserver/dillinger
   pullPolicy: IfNotPresent
-  tag: 3.39.1@sha256:a91b8bda22f6cb1efef40c5fe973da16004897faec965ea7a2a9adf0f9ab43a7
+  tag: 3.39.1@sha256:cb9813cbffadc884c2d2aaafd6953bc5b09e0f7878e461e3f9817443c8851034
 securityContext:
   container:
     runAsNonRoot: false

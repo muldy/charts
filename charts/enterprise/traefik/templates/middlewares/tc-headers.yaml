@@ -19,7 +19,6 @@ spec:
     accessControlMaxAge: 100
     browserXssFilter: true
     contentTypeNosniff: true
-    frameDeny: true
     customRequestHeaders:
       X-Forwarded-Proto: https
     customResponseHeaders:
@@ -52,7 +51,6 @@ spec:
     browserXssFilter: true
     sslForceHost: true
     referrerPolicy: same-origin
-    contentSecurityPolicy: frame-ancestors 'self'; form-action 'self'
     customRequestHeaders:
       X-Forwarded-Proto: "https"
     customResponseHeaders:

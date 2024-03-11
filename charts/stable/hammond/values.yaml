@@ -1,29 +1,13 @@
 image:
-  repository: ghcr.io/alfhou/hammond
-  tag: v0.0.24@sha256:c85dc0293aa10be15280277bade9cce808be572d0d4c5eac62acd87dec30479d
+  repository: akhilrex/hammond
+  tag: 1.0.0@sha256:07e73c226c3bae8863a0aff1530d84d5edd68308264e42375d1af61ad9955be4
   pullPolicy: IfNotPresent
-
 service:
   main:
     ports:
       main:
-        targetPort: 3000
         port: 10186
-
-workload:
-  main:
-    podSpec:
-      containers:
-        main:
-          env:
-            JWT_SECRET:
-              secretKeyRef:
-                name: secrets
-                key: JWT_SECRET
-            # manually define storage paths
-            CONFIG: "{{.Values.persistence.config.mountPath }}"
-            DATA: "{{.Values.persistence.assets.mountPath }}"
-
+        targetPort: 3000
 persistence:
   config:
     enabled: true
@@ -31,7 +15,23 @@ persistence:
   assets:
     enabled: true
     mountPath: "/assets"
-
 portal:
   open:
     enabled: true
+workload:
+  main:
+    podSpec:
+      containers:
+        main:
+          probes:
+            liveness:
+              type: tcp
+            readiness:
+              type: tcp
+            startup:
+              type: tcp
+          env:
+            JWT_SECRET:
+              secretKeyRef:
+                name: secrets
+                key: JWT_SECRET

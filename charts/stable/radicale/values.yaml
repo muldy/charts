@@ -61,14 +61,14 @@ persistence:
     enabled: true
     type: configmap
     objectName: radicale-config
-    mountPath: /config/config
+    mountPath: /etc/radicale/config
     subPath: config
     readOnly: false
   users:
     enabled: true
     type: configmap
     objectName: radicale-users
-    mountPath: /config/users
+    mountPath: /etc/radicale/users
     subPath: users
     readOnly: false
   data:

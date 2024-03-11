@@ -1,26 +1,33 @@
 annotations:
-  max_scale_version: 24.04.0
+  max_scale_version: 23.10.2
   min_scale_version: 23.10.0
   truecharts.org/SCALE-support: "true"
   truecharts.org/category: metrics
   truecharts.org/max_helm_version: "3.14"
-  truecharts.org/min_helm_version: "3.11"
+  truecharts.org/min_helm_version: "3.12"
   truecharts.org/train: enterprise
 apiVersion: v2
-appVersion: 2.50.1
+appVersion: 2.49.1
 dependencies:
   - name: common
-    version: 20.0.6
+    version: 17.2.29
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
     tags: []
     import-values: []
-  - name: kube-prometheus-stack
-    version: 56.21.0
-    repository: oci://ghcr.io/prometheus-community/charts
-    condition: ""
-    alias: kps
+  - name: node-exporter
+    version: 6.1.14
+    repository: https://deps.truecharts.org
+    condition: exporters.enabled,exporters.node-exporter.enabled
+    alias: ""
+    tags: []
+    import-values: []
+  - name: kube-state-metrics
+    version: 6.1.15
+    repository: https://deps.truecharts.org
+    condition: exporters.enabled,exporters.kube-state-metrics.enabled
+    alias: ""
     tags: []
     import-values: []
 deprecated: false
@@ -29,7 +36,7 @@ home: https://truecharts.org/charts/enterprise/prometheus
 icon: https://truecharts.org/img/hotlink-ok/chart-icons/prometheus.png
 keywords:
   - metrics
-kubeVersion: '>=1.24.0-0'
+kubeVersion: ">=1.24.0-0"
 maintainers:
   - name: TrueCharts
     email: info@truecharts.org
@@ -43,4 +50,4 @@ sources:
   - https://hub.docker.com/r/bitnami/alertmanager
   - https://hub.docker.com/r/bitnami/prometheus
 type: application
-version: 17.9.0
+version: 16.4.1
