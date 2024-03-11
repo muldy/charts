@@ -1,7 +1,7 @@
 image:
   repository: metabase/metabase
   pullPolicy: IfNotPresent
-  tag: v0.48.4@sha256:fb0eb5b79deb9872061f53b967ee857e8210c42a6ad2f5f2322bcef3d7dd1931
+  tag: v0.48.8@sha256:2087df52e153a4f81245ed466e1757e3328e0ee7b09e3f53d928fcaa26d192e8
 service:
   main:
     ports:

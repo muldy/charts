@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: ghcr.io/hotio/duplicacy
-  tag: release-1.7.2@sha256:b4b1a79287014d9c50410558f841264c834d4c00a7d703f6efdfebd711f2704c
+  tag: release-1.7.2@sha256:a2740eaaf750d055106260ea6b86d0e4ceb3453d19c75dfd2420b768dab9919d
 securityContext:
   container:
     runAsGroup: 0

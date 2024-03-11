@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/geek-cookbook/emby
   pullPolicy: IfNotPresent
-  tag: 4.7.14.0@sha256:ccdad65c7c631f60f9b1859e748d075b5923249b0f6b1f2c6058ad8942417fcc
+  tag: 4.8.3.0@sha256:3e01274e7dffbc55e96f431d334ea80cf8fae686daa0e626f4f2fe8a2124c218
 securityContext:
   container:
     readOnlyRootFilesystem: false

@@ -1,11 +1,11 @@
 image:
   repository: ollama/ollama
   pullPolicy: IfNotPresent
-  tag: 0.1.22@sha256:f6199bb6d5177462d63b5e6a64f0ca73c0a9994c90044fdc78d07381e0f8d126
+  tag: 0.1.29@sha256:1cbc27cc9df6090128be39cfd720c2016b2b0f1230193eec522eba1b956b2acc
 uiImage:
-  repository: ghcr.io/ollama-webui/ollama-webui
+  repository: ghcr.io/open-webui/open-webui
   pullPolicy: IfNotPresent
-  tag: main@sha256:06e060b8bf3f9d13c036cec749bea4cf3e9cc3e61a6cb33132d1776d3d57403d
+  tag: latest@sha256:63318f974e67424b649486d85f8201d6018943115e01983b8dc4bdd329b09711
 
 service:
   main:
@@ -18,14 +18,19 @@ service:
         targetSelector: ui
   api:
     enabled: true
-    type: ClusterIP
     targetSelector: main
     ports:
       api:
         enabled: true
         protocol: http
+        targetPort: 11434
         port: 11434
         targetSelector: main
+
+ingress:
+  api:
+    targetSelector:
+      api: api
 
 workload:
   main:
@@ -62,6 +67,11 @@ workload:
           primary: true
           enabled: true
           imageSelector: uiImage
+          securityContext:
+            runAsUser: 0
+            runAsGroup: 0
+            runAsNonRoot: false
+            readOnlyRootFilesystem: false
           probes:
             liveness:
               enabled: true
@@ -78,7 +88,11 @@ workload:
               type: tcp
               port: "{{ .Values.service.main.ports.main.targetPort }}"
           env:
-            OLLAMA_API_BASE_URL: '{{ printf "http://%v-api:%v/api" (include "tc.v1.common.lib.chart.names.fullname" $) .Values.service.api.ports.api.port }}'
+            OLLAMA_API_BASE_URL: '{{ printf "http://%v-api:%v/api" (include "tc.v1.common.lib.chart.names.fullname" $) .Values.service.api.ports.api.targetPort }}'
+            WEBUI_SECRET_KEY:
+              secretKeyRef:
+                name: ollama-secrets
+                key: WEBUI_SECRET_KEY
 
 persistence:
   config:

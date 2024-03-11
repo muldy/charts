@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: sismics/docs
-  tag: latest@sha256:d619cae9bdcd63bc3534b763e796ae2b99b5fe2c4405395b99f8f0665939fb7c
+  tag: latest@sha256:774c6d21810c85f2227ab68645a76ac797ace2414cba3b69ddaca11b556c36ad
 persistence:
   data:
     enabled: true

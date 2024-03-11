@@ -1,7 +1,7 @@
 image:
   repository: docker.io/codercom/code-server
   pullPolicy: IfNotPresent
-  tag: 4.20.1@sha256:94e705de31ca2e6d0c28fec83f004c4159c037338c485ca0b60bba7e90bde8f9
+  tag: 4.22.0@sha256:de0c76895365456d651331ea3002befab50df31b6a9996d05b7c18c8734e5e4e
 securityContext:
   container:
     readOnlyRootFilesystem: false

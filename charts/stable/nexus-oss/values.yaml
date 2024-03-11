@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: sonatype/nexus3
-  tag: 3.64.0@sha256:b0cfe12ccb9e6a81ea7bebbbd030f8c29df99093205c7f730f303961e98cf8c5
+  tag: 3.66.0@sha256:c63b3fb721e9c0339a721a911a544098a2d3ba03f74dd792fce08caf04b2326f
 persistence:
   data:
     enabled: true
